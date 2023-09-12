@@ -1,0 +1,224 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+
+.banner-content ul li:nth-child(1) {
+  text-transform: uppercase;
+  padding: 0px 6px 0px 0px;
+  list-style: none;
+  background-color: transparent;
+  border-radius: 0;
+  font-weight: 400;
+  color: #fff;
+  border-right: 2px solid #ccc;
+}
+
+.banner-content ul li:nth-child(2) {
+  text-transform: uppercase;
+  padding: 0px 6px 0px 0px;
+  list-style: none;
+  background-color: transparent;
+  border-radius: 0;
+  font-weight: 400;
+  color: #fff;
+  border-right: 2px solid #ccc;
+}
+
+.banner-content ul li {
+  text-transform: uppercase;
+  padding: 0px 6px 0px 0px;
+  list-style: none;
+  background-color: transparent;
+  border-radius: 0;
+  font-weight: 400;
+  color: #fff;
+}
+
+.primary-btn {
+  color: #000;
+  background-color: #fff;
+  border: 1px solid #fff;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  /* background-color: transparent; */
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  padding: 12px 50px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.primary-btn:hover{
+  background-color: #000;
+  color:#fff;
+  
+}
+
+.sec-btn {
+  background-color: #000;
+  color: #fff;
+  text-transform: uppercase;
+  border: 1px solid #000;
+  padding: 10px 40px;
+}
+
+.sec-btn:hover {
+  background-color: #fff;
+  color: #000;
+}
+@media only screen and (max-width: 1073px) {
+  .testinominal-card {
+    left: 22rem !important;
+  }
+}
+
+@media only screen and (max-width: 803px) {
+  .testinominal-card {
+    left: 0rem !important;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .bg-banner {
+    background-image: url(sources/images/rafael-nadal-mob.jpg) !important;
+    background-size: cover;
+  }
+
+  .banner-content h1 {
+    font-size: 40px;
+    line-height: 40px;
+  } 
+
+  .primary-btn {
+    color: #fff;
+    border: 1px solid #fff;
+    display: inline-block;
+    background-color: transparent;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    padding: 6px 8px;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    letter-spacing: 1.5px;
+    margin-top: 0px;
+    font-weight: 700;
+    font-size: 14px;
+  }
+
+  .digital-core-content h2 {
+    font-size: 40px;
+    line-height: 40px;
+  }
+}
+
+.sidenav {
+  position: relative;
+  position: sticky;
+  top: 15rem;
+  z-index: 9999;
+}
+
+.sidenav-inner {
+  position: absolute;
+}
+
+.sidenav-inner ul li {
+  color: #ffff;
+  margin: 0px 20px;
+  padding: 20px 0px;
+}
+
+.whitebar {
+  content: " ";
+  width: 40px;
+  height: 2px;
+  background-color: #fff ;
+}
+
+
+.hidden {
+  display: none;
+}
+
+li:hover .hidden {
+  display: block !important;
+}
+
+li:hover .whitebar {
+  width: 80px !important;
+  height: 4px !important;
+  transition-property: width !important;
+  transition-duration: 0.5s !important;
+  transition-delay: 0.1s !important;
+  
+}
+
+/* smooth scroller behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+#A:hover #AA {
+  width: 80px;
+  height: 4px;
+}
+
+@media only screen and (max-width: 1314px) {
+  .sidenav {
+    display: none;
+  }
+}
+
+.zoom-effect-container {
+  float: left;
+  position: relative;
+  width: 100%;
+  height: 23rem;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.image-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width:100%;
+}
+
+.image-card div {
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+}
+.zoom-effect-container:hover .image-card div {
+  -webkit-transform: scale(1.08);
+  transform: scale(1.08);
+}
+
+
