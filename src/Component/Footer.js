@@ -31,11 +31,8 @@ function Footer(props) {
     
     </div>
 
-<<<<<<< HEAD
-
-=======
   
->>>>>>> origin/master
+
 
 
     </div>
