@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React from 'react';
 
 import BannerVideo from './assets/Videos/Studio Agency -- React Multipurpose Template.mp4'
 
@@ -7,9 +7,31 @@ import MainLogo from './assets/Images/logo.png'
 import AboutImage from './assets/Images/about-3.jpg';
 
 
+import AllWorkImage1 from './assets/Images/portfolio-1-390x532.jpg'
+import AllWorkImage2 from './assets/Images/portfolio-5-390x532.jpg'
+import AllWorkImage3 from './assets/Images/portfolio-6-390x532.jpg'
+
+
+
+import CountUp from 'react-countup';
+
+import AliceCarousel from 'react-alice-carousel';
+import 'react-alice-carousel/lib/alice-carousel.css';
+
+
+import CustomerTestinominal from './components/CustomerTestinominal';
 
 function App() {
   
+
+  const handleDragStart = (e) => e.preventDefault();
+
+const items = [
+  <img src={AllWorkImage1} onDragStart={handleDragStart} role="presentation" />,
+  <img src={AllWorkImage2} onDragStart={handleDragStart} role="presentation" />,
+  <img src={AllWorkImage3} onDragStart={handleDragStart} role="presentation" />,
+];
+
 
   return (
     <>
@@ -130,7 +152,7 @@ typeof='video/mp4'></video>
 <div className='grid lg:grid-cols-12 md:grid-cols-12 sm:grid-cols-12 grid-cols-12 '>
 
 
-<div className='lg:col-span-4 md:col-span-4 sm:col-span-12 col-span-12'>
+<div className='lg:col-span-4 md:col-span-4 sm:col-span-12 col-span-12 lg:p-0 md:p-0 sm:p-10 p-0'>
   <h3 className='lg:text-6xl md:text-6xl sm:text-3xl text-3xl mb-2 font-bold text-[#1f1f25]'>Services</h3>
   <p className='lg:text-lg md:text-lg sm:text-sm text-sm text-[#1d1d24bf] my-[15px]'>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
 
@@ -144,31 +166,31 @@ typeof='video/mp4'></video>
 
 <div className='lg:flex md:flex sm:flex '>
 
-<div className='w-full py-30px px-35 visible rounded-lg opacity-100 hover:bg-gradient-to-r from-[#ef0963] to-[#ef0963]'>
-<svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" className="text-[#ef0963] text-5xl font-normal" stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M2 16.1A5 5 0 0 1 5.9 20M2 12.05A9 9 0 0 1 9.95 20M2 8V6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-6"></path><line x1="2" y1="20" x2="2" y2="20"></line></svg>
-  <h4 className='text-2xl font-medium my-5'>Business Stratagy</h4>
-  <p className='text-lg  text-[#1d1d24bf]'>I throw myself down among the tall grass by the stream as I lie close to the earth.</p>
+<div className='w-full p-10 visible rounded-lg opacity-100 hover:bg-gradient-to-r from-[#f81f01] to-[#ef0963] group'>
+<svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" className="text-[#ef0963] text-5xl font-normal group-hover:text-[#fff] " stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M2 16.1A5 5 0 0 1 5.9 20M2 12.05A9 9 0 0 1 9.95 20M2 8V6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-6"></path><line x1="2" y1="20" x2="2" y2="20"></line></svg>
+  <h4 className='text-2xl font-medium my-5 group-hover:text-[#fff]'>Business Stratagy</h4>
+  <p className='text-lg  text-[#1d1d24bf] group-hover:text-[#fff]'>I throw myself down among the tall grass by the stream as I lie close to the earth.</p>
 </div>
 
-<div className='w-full py-30px px-35 card-bg'>
-<svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" className="text-[#ef0963] text-5xl font-normal" stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
-  <h4 className='text-2xl font-medium my-5'>Website Development</h4>
-  <p className='text-lg  text-[#1d1d24bf]'>I throw myself down among the tall grass by the stream as I lie close to the earth.</p>
+<div className='w-full p-10 visible rounded-lg opacity-100 hover:bg-gradient-to-r from-[#f81f01] to-[#ef0963] group'>
+<svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" className="text-[#ef0963] text-5xl font-normal group-hover:text-[#fff]" stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+  <h4 className='text-2xl font-medium my-5 group-hover:text-[#fff]'>Website Development</h4>
+  <p className='text-lg  text-[#1d1d24bf] group-hover:text-[#fff]'>I throw myself down among the tall grass by the stream as I lie close to the earth.</p>
 </div>
 
 </div>
 
 <div className='lg:flex md:flex sm:flex mt-10'>
 
-<div className='w-full py-30px px-35 card-bg'>
-<svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" className="text-[#ef0963] text-5xl font-normal" stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-  <h4 className='text-2xl font-medium my-5'>Marketing & Reporting</h4>
-  <p className='text-lg  text-[#1d1d24bf]'>I throw myself down among the tall grass by the stream as I lie close to the earth.</p>
+<div className='w-full p-10 visible rounded-lg opacity-100 hover:bg-gradient-to-r from-[#f81f01] to-[#ef0963] group'>
+<svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" className="text-[#ef0963] text-5xl font-normal group-hover:text-[#fff]" stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+  <h4 className='text-2xl font-medium my-5 group-hover:text-[#fff]'>Marketing & Reporting</h4>
+  <p className='text-lg  text-[#1d1d24bf] group-hover:text-[#fff]'>I throw myself down among the tall grass by the stream as I lie close to the earth.</p>
 </div>
-<div className='w-full py-30px px-35 card-bg'>
-<svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" className="text-[#ef0963] text-5xl font-normal" stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
-  <h4 className='text-2xl font-medium my-5'>Mobile App Development</h4>
-  <p className='text-lg  text-[#1d1d24bf]'>I throw myself down among the tall grass by the stream as I lie close to the earth.</p>
+<div className='w-full p-10 visible rounded-lg opacity-100 hover:bg-gradient-to-r from-[#f81f01] to-[#ef0963] group'>
+<svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" className="text-[#ef0963] text-5xl font-normal group-hover:text-[#fff]" stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+  <h4 className='text-2xl font-medium my-5 group-hover:text-[#fff]'>Mobile App Development</h4>
+  <p className='text-lg  text-[#1d1d24bf] group-hover:text-[#fff]'>I throw myself down among the tall grass by the stream as I lie close to the earth.</p>
 </div>
 
 </div>
@@ -181,6 +203,83 @@ typeof='video/mp4'></video>
 </div>
 </section>
 
+{/* ============================ */}
+{/* -----------All Work */}
+{/* ============================ */}
+
+
+<section className='my-28'>
+<div className='container mx-auto max-w-6xl px-2'>
+<div className='grid lg:grid-cols-12 md:grid-cols-12 sm:grid-cols-12 grid-cols-12'>
+
+<div className='col-span-12'>
+<h3 className='text-center lg:text-6xl md:text-6xl sm:text-3xl text-3xl mb-2 font-bold text-[#1f1f25]'>All Works</h3>
+<p className='text-center lg:text-lg md:text-lg sm:text-sm text-sm text-[#1d1d24bf] my-[15px]'>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
+</div>
+
+<div className='col-span-12'>
+<AliceCarousel mouseTracking items={items} />
+
+</div>
+
+</div>
+</div>
+</section>
+
+
+{/* ============================ */}
+{/* -----------Complete Projects */}
+{/* ============================ */}
+
+<section className='my-28'>
+<div className='container mx-auto max-w-6xl px-2'>
+<div className='grid lg:grid-cols-12 md:grid-cols-12 sm:grid-cols-12 grid-cols-12'>
+
+<div className='col-span-12'>
+<h3 className='text-center lg:text-6xl md:text-6xl sm:text-3xl text-3xl mb-2 font-bold text-[#1f1f25]'>Completed 1200+ Projects<br/>
+Successfully.</h3>
+
+</div>
+</div>
+
+
+
+<div className='grid lg:grid-cols-12 md:grid-cols-12 sm:grid-cols-12 grid-cols-12 mt-10'>
+
+<div className='lg:col-span-4 md:col-span-4 sm:col-span-4 col-span-12 flex justify-center items-center flex-col px-4'>
+<CountUp end={800} 
+duration={5}
+suffix=" +"
+className='lg:text-6xl md:text-6xl sm:text-3xl text-3xl mb-2 font-bold text-[#f9004d]'/>
+<p className='text-center lg:text-lg md:text-lg sm:text-sm text-sm text-[#1d1d24bf] my-[15px]'>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those.</p>
+</div>
+
+<div className='lg:col-span-4 md:col-span-4 sm:col-span-4 col-span-12 flex justify-center items-center flex-col px-4'>
+<CountUp end={1200} 
+duration={5}
+suffix=" +"
+className='lg:text-6xl md:text-6xl sm:text-3xl text-3xl mb-2 font-bold text-[#f9004d]'/>
+<p className='text-center lg:text-lg md:text-lg sm:text-sm text-sm text-[#1d1d24bf] my-[15px]'>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those.</p>
+</div>
+
+
+
+<div className='lg:col-span-4 md:col-span-4 sm:col-span-4 col-span-12 flex justify-center items-center flex-col px-4'>
+<CountUp end={700} 
+duration={5}
+suffix=" +"
+className='lg:text-6xl md:text-6xl sm:text-3xl text-3xl mb-2 font-bold text-[#f9004d]'/>
+<p className='text-center lg:text-lg md:text-lg sm:text-sm text-sm text-[#1d1d24bf] my-[15px]'>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+{/* ============================ */}
+{/* -----------Testinominal*/}
+{/* ============================ */}
+<CustomerTestinominal/>
 
     </>
   )
