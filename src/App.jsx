@@ -12,6 +12,9 @@ import AllWorkImage2 from './assets/Images/portfolio-5-390x532.jpg'
 import AllWorkImage3 from './assets/Images/portfolio-6-390x532.jpg'
 
 
+import BlogImage1 from './assets/Images/blog-01.jpg'
+import BlogImage2 from './assets/Images/blog-02.jpg'
+import BlogImage3 from './assets/Images/blog-03.jpg'
 
 import CountUp from 'react-countup';
 
@@ -280,6 +283,85 @@ className='lg:text-6xl md:text-6xl sm:text-3xl text-3xl mb-2 font-bold text-[#f9
 {/* -----------Testinominal*/}
 {/* ============================ */}
 <CustomerTestinominal/>
+
+{/* ============================ */}
+{/* -----------Latest News*/}
+{/* ============================ */}
+
+<section className='my-28'>
+<div className='container mx-auto max-w-6xl px-2'>
+<div className='grid lg:grid-cols-12 md:grid-cols-12 sm:grid-cols-12 grid-cols-12'>
+<div className='lg:col-span-12 md:col-span-12 sm:col-span-12 col-span-12'>
+<h3 className='lg:text-6xl md:text-6xl sm:text-3xl text-3xl mb-2 font-bold text-[#1f1f25]'>Latest News</h3>
+</div>
+
+<div className='lg:col-span-6 md:col-span-6 sm:col-span-6 col-span-6'>
+<p className='lg:text-lg md:text-lg sm:text-sm text-sm text-[#1d1d24bf] my-[15px]'>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
+</div>
+
+<div className='lg:col-span-6 md:col-span-6 sm:col-span-6 col-span-6'>
+<p className='lg:text-lg md:text-lg sm:text-sm text-sm text-[#1f1f25] my-[15px] text-right hover:text-[#f9004d] '>View All News</p>
+<span className='underline-effect'></span>
+</div>
+</div>
+
+<div className='grid gap-4 lg:grid-cols-12 md:grid-cols-12 sm:grid-cols-12 grid-cols-12 mt-10'>
+
+<div className='lg:col-span-4 md:col-span-4 sm:col-span-4 col-span-4 relative group'>
+<img
+src={BlogImage1}
+alt="blog images"
+className='hover:bg-gradient-to-r from-[#f9004d] to-[#790429] hover:absolute z-[1] group hover:bg-opacity-30'
+/>
+
+<div className='absolute z-[9999] bottom-0 p-6'>
+<span className='text-sm text-[#c6c9d8] mb-2'>Development</span>
+<h4 className='text-[#fff] text-2xl font-medium'>Getting tickets to the big show</h4>
+<div className='my-2 hidden group-hover:block'><a herf="" className='text-[#f9004d] rounded border-2 border-[#f9004d] px-3 py-1'>Read More</a> </div>
+</div>
+
+</div>
+
+
+<div className='lg:col-span-4 md:col-span-4 sm:col-span-4 col-span-4 relative group'>
+<img
+src={BlogImage2}
+alt="blog images"
+className='hover:bg-gradient-to-r from-[#f9004d] to-[#790429] hover:absolute z-[1] group hover:bg-opacity-30'
+/>
+
+<div className='absolute z-[9999] bottom-0 p-6'>
+<span className='text-sm text-[#c6c9d8] mb-2'>Development</span>
+<h4 className='text-[#fff] text-2xl font-medium'>Getting tickets to the big show</h4>
+<div className='my-2 hidden group-hover:block'><a herf="" className='text-[#f9004d] rounded border-2 border-[#f9004d] px-3 py-1'>Read More</a> </div>
+</div>
+
+</div>
+
+
+<div className='lg:col-span-4 md:col-span-4 sm:col-span-4 col-span-4 relative group'>
+<img
+src={BlogImage3}
+alt="blog images"
+className='hover:bg-gradient-to-r from-[#f9004d] to-[#790429] hover:absolute z-[1] group hover:bg-opacity-30'
+/>
+
+<div className='absolute z-[9999] bottom-0 p-6'>
+<span className='text-sm text-[#c6c9d8] mb-2'>Development</span>
+<h4 className='text-[#fff] text-2xl font-medium'>Getting tickets to the big show</h4>
+<div className='my-2 hidden group-hover:block'><a herf="" className='text-[#f9004d] rounded border-2 border-[#f9004d] px-3 py-1'>Read More</a> </div>
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+</section>
+
+
+
 
     </>
   )

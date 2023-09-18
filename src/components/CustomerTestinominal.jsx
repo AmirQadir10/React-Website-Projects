@@ -17,6 +17,14 @@ function CustomerTestinominal() {
 const [comment, setcomment] = useState("")
 const [title, settitle] = useState("")
 
+const [id, setid] = useState(0)
+
+const onclickimagethumb = (num) => {
+setid(num)
+
+console.log(num)
+
+}
 
 
 
@@ -45,8 +53,12 @@ const changethetitle = (tit) =>{
     </div>
 
     <ul className='col-span-12 flex justify-center '>
-<li className='px-2'> 
-<img src={Testinominal1} alt="image of testinominal" onClick={() => {changethecomment("Phenomenal Customer Service! I'm just starting out with the team helped me so much with integrating this into my website. Highly recommend."); changethetitle("Bashir"); }}   className='cursor-pointer'/> 
+<li className='px-2 relatve'> 
+<span className='rounded-lg bg-[#f9004d] absolute w-[10px] h-[10px] hidden  ' id="1"></span>
+
+<img src={Testinominal1} alt="image of testinominal" onClick={() => {changethecomment("Phenomenal Customer Service! I'm just starting out with the team helped me so much with integrating this into my website. Highly recommend."); changethetitle("Bashir"); onclickimagethumb(1); }}   className='cursor-pointer'/> 
+
+
  </li>
 
 <li className='px-2'>
