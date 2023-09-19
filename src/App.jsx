@@ -16,6 +16,14 @@ import BlogImage1 from './assets/Images/blog-01.jpg'
 import BlogImage2 from './assets/Images/blog-02.jpg'
 import BlogImage3 from './assets/Images/blog-03.jpg'
 
+
+import BrandName1 from './assets/Images/brand-01.png'
+import BrandName2 from './assets/Images/brand-02.png'
+import BrandName3 from './assets/Images/brand-03.png'
+import BrandName4 from './assets/Images/brand-04.png'
+import BrandName5 from './assets/Images/brand-05.png'
+import BrandName6 from './assets/Images/brand-06.png'
+
 import CountUp from 'react-countup';
 
 import AliceCarousel from 'react-alice-carousel';
@@ -311,7 +319,7 @@ className='lg:text-6xl md:text-6xl sm:text-3xl text-3xl mb-2 font-bold text-[#f9
 <img
 src={BlogImage1}
 alt="blog images"
-className='hover:bg-gradient-to-r from-[#f9004d] to-[#790429] hover:absolute z-[1] group hover:bg-opacity-30'
+className='hover:bg-gradient-to-r from-[#f9004d] to-[#790429] hover:z-[1] group  p-20 absolute'
 />
 
 <div className='absolute z-[9999] bottom-0 p-6'>
@@ -360,8 +368,88 @@ className='hover:bg-gradient-to-r from-[#f9004d] to-[#790429] hover:absolute z-[
 </div>
 </section>
 
+{/* ============================ */}
+{/* ----Brand Name --------------*/}
+{/* ============================ */}
+
+<section className='my-28'>
+<div className='container mx-auto max-w-6xl px-2'>
+<div className='grid lg:grid-cols-5 md:grid-cols-5 sm:grid-cols-5 grid-cols-5'>
+
+<div className='col-span-2.5 img-hover-zoom--zoom-n-rotate px-6'>
+<img
+src={BrandName1}
+alt='Brand logo'
+/>
+</div>
+
+<div className='col-span-2.5 img-hover-zoom--zoom-n-rotate px-6'>
+<img
+src={BrandName2}
+alt='Brand logo'
+/>
+</div>
+
+<div className='col-span-2.5 img-hover-zoom--zoom-n-rotate px-6'>
+<img
+src={BrandName3}
+alt='Brand logo'
+/>
+</div>
 
 
+<div className='col-span-2.5 img-hover-zoom--zoom-n-rotate px-6'>
+<img
+src={BrandName4}
+alt='Brand logo'
+/>
+</div>
+
+
+
+<div className='col-span-2.5 img-hover-zoom--zoom-n-rotate px-6'>
+<img
+src={BrandName5}
+alt='Brand logo'
+/>
+</div>
+
+
+</div>
+
+<div className='lg:grid-cols-5 md:grid-cols-5 sm:grid-cols-5 grid-cols-5 flex justify-center items-center mt-4'>
+<div className='col-span-2.5 img-hover-zoom--zoom-n-rotate px-6'>
+<img
+src={BrandName6}
+alt='Brand logo'
+/>
+</div>
+
+<div className='col-span-2.5 img-hover-zoom--zoom-n-rotate px-6'>
+<img
+src={BrandName3}
+alt='Brand logo'
+/>
+</div>
+
+<div className='col-span-2.5 img-hover-zoom--zoom-n-rotate px-6'>
+<img
+src={BrandName2}
+alt='Brand logo'
+/>
+</div>
+
+
+<div className='col-span-2.5 img-hover-zoom--zoom-n-rotate px-6'>
+<img
+src={BrandName1}
+alt='Brand logo'
+/>
+</div>
+</div>
+
+</div>
+</section>
 
     </>
   )

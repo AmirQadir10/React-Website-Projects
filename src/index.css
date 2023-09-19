@@ -83,3 +83,17 @@ h1,h2,h3,h4,h5,h6,p{
     display : inline-block;
 
   }
+
+
+    /*image zooming effect*/
+  /* Zoom-n-rotate Container */
+.img-hover-zoom--zoom-n-rotate img {
+  transition: transform .5s ease-in-out;
+  opacity:0.5;
+}
+
+/* The Transformation */
+.img-hover-zoom--zoom-n-rotate:hover img {
+  transform: scale(1.2) ;
+  opacity:1.0;
+}
