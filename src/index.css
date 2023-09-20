@@ -28,61 +28,37 @@ h1,h2,h3,h4,h5,h6,p{
   border-left: 15px solid #fff;
 }
 
-.slider {
-    position: relative;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .image {
-    width: 1000px;
-    height: 600px;
-    border-radius: 10px;
-  }
-  
-  .right-arrow {
-    position: absolute;
-    top: 50%;
-    right: 32px;
-    font-size: 3rem;
-    color: #000;
-    z-index: 10;
-    cursor: pointer;
-    user-select: none;
-  }
-  
-  .left-arrow {
-    position: absolute;
-    top: 50%;
-    left: 32px;
-    font-size: 3rem;
-    color: #000;
-    z-index: 10;
-    cursor: pointer;
-    user-select: none;
-  }
-  
-  .slide {
-    opacity: 0;
-    transition-duration: 1s ease;
-  }
-  
-  .slide.active {
-    opacity: 1;
-    transition-duration: 1s;
-    transform: scale(1.08);
-  }
+
 
   .underline-effect::after{
-    content :" ";
-    width:30px;
-    height:2px;
-    background-color: black;
-    display : inline-block;
-
+  display:inline-block;
+    content: "";
+    width: 40px;
+    height: 2px;
+    background: #f9004d;
+    opacity: .75;
+  float:right;
   }
+
+   p .underline-effect:hover::after{
+ 
+      width: 80px;
+ 
+    }
+  
+
+
+.social-media-brand{
+  border: 2px solid #9c9eab;
+    border-radius: 50rem;
+    padding: 14px;
+    margin: 3px;
+}
+
+.social-media-brand:hover{
+  border: 2px solid #e9162b;
+}
+
 
 
     /*image zooming effect*/
@@ -96,4 +72,60 @@ h1,h2,h3,h4,h5,h6,p{
 .img-hover-zoom--zoom-n-rotate:hover img {
   transform: scale(1.2) ;
   opacity:1.0;
+}
+
+
+
+/*image on hover color gradient effect*/
+.img-gradient{
+  position:relative;
+  display:inline-block;
+}
+
+.img-gradient:hover::after {
+  content:'';
+  position:absolute;
+  left:0; top:0;
+  width:100%;
+   height:100%;
+  display:inline-block;
+  background: linear-gradient(180deg,#fc004d 0,#000);
+  opacity: .85;
+}
+
+
+
+
+
+/*Multiple careousel*/
+
+.slider {
+  margin:0 20px;
+  overflow:"hidden";
+  padding:2rem 0;
+}
+
+.slider:hover{
+  padding:0rem 0;
+}
+
+.slider img {
+  width: 100%;
+  border-radius:10px;
+}
+
+.react-multi-carousel-list {
+padding: 0rem 0 2rem 0;
+}
+
+.custom-dot-list-style button{
+border: none;
+background: rgb(255, 68, 68);
+}
+.react-multi-carousel-dot.react-multi-carousel-dot--active button{
+background: rgb(255, 68, 68) !important;
+}
+
+.slider{
+  height: 60vh !important;
 }

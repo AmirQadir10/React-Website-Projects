@@ -1,15 +1,15 @@
 import React from 'react';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebookF, faLinkedinIn,faTwitter,faInstagram } from '@fortawesome/free-brands-svg-icons' 
+  
+
+
 import BannerVideo from './assets/Videos/Studio Agency -- React Multipurpose Template.mp4'
 
 
 import MainLogo from './assets/Images/logo.png'
 import AboutImage from './assets/Images/about-3.jpg';
-
-
-import AllWorkImage1 from './assets/Images/portfolio-1-390x532.jpg'
-import AllWorkImage2 from './assets/Images/portfolio-5-390x532.jpg'
-import AllWorkImage3 from './assets/Images/portfolio-6-390x532.jpg'
 
 
 import BlogImage1 from './assets/Images/blog-01.jpg'
@@ -26,23 +26,12 @@ import BrandName6 from './assets/Images/brand-06.png'
 
 import CountUp from 'react-countup';
 
-import AliceCarousel from 'react-alice-carousel';
-import 'react-alice-carousel/lib/alice-carousel.css';
-
+import ReactMultiCarousel from './components/ReactMultiCarousel';
 
 import CustomerTestinominal from './components/CustomerTestinominal';
 
 function App() {
   
-
-  const handleDragStart = (e) => e.preventDefault();
-
-const items = [
-  <img src={AllWorkImage1} onDragStart={handleDragStart} role="presentation" />,
-  <img src={AllWorkImage2} onDragStart={handleDragStart} role="presentation" />,
-  <img src={AllWorkImage3} onDragStart={handleDragStart} role="presentation" />,
-];
-
 
   return (
     <>
@@ -228,13 +217,10 @@ typeof='video/mp4'></video>
 <p className='text-center lg:text-lg md:text-lg sm:text-sm text-sm text-[#1d1d24bf] my-[15px]'>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
 </div>
 
-<div className='col-span-12'>
-<AliceCarousel mouseTracking items={items} />
-
+</div>
 </div>
 
-</div>
-</div>
+<ReactMultiCarousel/>
 </section>
 
 
@@ -307,7 +293,7 @@ className='lg:text-6xl md:text-6xl sm:text-3xl text-3xl mb-2 font-bold text-[#f9
 <p className='lg:text-lg md:text-lg sm:text-sm text-sm text-[#1d1d24bf] my-[15px]'>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
 </div>
 
-<div className='lg:col-span-6 md:col-span-6 sm:col-span-6 col-span-6'>
+<div className='lg:col-span-6 md:col-span-6 sm:col-span-6 col-span-6 '>
 <p className='lg:text-lg md:text-lg sm:text-sm text-sm text-[#1f1f25] my-[15px] text-right hover:text-[#f9004d] '>View All News</p>
 <span className='underline-effect'></span>
 </div>
@@ -315,11 +301,13 @@ className='lg:text-6xl md:text-6xl sm:text-3xl text-3xl mb-2 font-bold text-[#f9
 
 <div className='grid gap-4 lg:grid-cols-12 md:grid-cols-12 sm:grid-cols-12 grid-cols-12 mt-10'>
 
-<div className='lg:col-span-4 md:col-span-4 sm:col-span-4 col-span-4 relative group'>
+<div className='lg:col-span-4 md:col-span-4 sm:col-span-12 col-span-12 relative group img-gradient'>
+
+ 
 <img
 src={BlogImage1}
 alt="blog images"
-className='hover:bg-gradient-to-r from-[#f9004d] to-[#790429] hover:z-[1] group  p-20 absolute'
+className=''
 />
 
 <div className='absolute z-[9999] bottom-0 p-6'>
@@ -331,15 +319,18 @@ className='hover:bg-gradient-to-r from-[#f9004d] to-[#790429] hover:z-[1] group 
 </div>
 
 
-<div className='lg:col-span-4 md:col-span-4 sm:col-span-4 col-span-4 relative group'>
+<div className='lg:col-span-4 md:col-span-4 sm:col-span-12 col-span-12 relative group img-gradient'>
+
+
 <img
 src={BlogImage2}
 alt="blog images"
-className='hover:bg-gradient-to-r from-[#f9004d] to-[#790429] hover:absolute z-[1] group hover:bg-opacity-30'
+className=''
 />
 
+
 <div className='absolute z-[9999] bottom-0 p-6'>
-<span className='text-sm text-[#c6c9d8] mb-2'>Development</span>
+<span className='text-sm text-[#c6c9d8] mb-2'>Management</span>
 <h4 className='text-[#fff] text-2xl font-medium'>Getting tickets to the big show</h4>
 <div className='my-2 hidden group-hover:block'><a herf="" className='text-[#f9004d] rounded border-2 border-[#f9004d] px-3 py-1'>Read More</a> </div>
 </div>
@@ -347,15 +338,18 @@ className='hover:bg-gradient-to-r from-[#f9004d] to-[#790429] hover:absolute z-[
 </div>
 
 
-<div className='lg:col-span-4 md:col-span-4 sm:col-span-4 col-span-4 relative group'>
+<div className='lg:col-span-4 md:col-span-4 sm:col-span-12 col-span-12 relative group img-gradient'>
+
 <img
 src={BlogImage3}
 alt="blog images"
-className='hover:bg-gradient-to-r from-[#f9004d] to-[#790429] hover:absolute z-[1] group hover:bg-opacity-30'
+className=''
 />
 
+
+
 <div className='absolute z-[9999] bottom-0 p-6'>
-<span className='text-sm text-[#c6c9d8] mb-2'>Development</span>
+<span className='text-sm text-[#c6c9d8] mb-2'>Design</span>
 <h4 className='text-[#fff] text-2xl font-medium'>Getting tickets to the big show</h4>
 <div className='my-2 hidden group-hover:block'><a herf="" className='text-[#f9004d] rounded border-2 border-[#f9004d] px-3 py-1'>Read More</a> </div>
 </div>
@@ -374,7 +368,7 @@ className='hover:bg-gradient-to-r from-[#f9004d] to-[#790429] hover:absolute z-[
 
 <section className='my-28'>
 <div className='container mx-auto max-w-6xl px-2'>
-<div className='grid lg:grid-cols-5 md:grid-cols-5 sm:grid-cols-5 grid-cols-5'>
+<div className='grid lg:grid-cols-5 md:grid-cols-5 sm:grid-cols-3 grid-cols-3'>
 
 <div className='col-span-2.5 img-hover-zoom--zoom-n-rotate px-6'>
 <img
@@ -417,7 +411,7 @@ alt='Brand logo'
 
 </div>
 
-<div className='lg:grid-cols-5 md:grid-cols-5 sm:grid-cols-5 grid-cols-5 flex justify-center items-center mt-4'>
+<div className='lg:grid-cols-5 md:grid-cols-5 sm:grid-cols-3 grid-cols-3 flex justify-center items-center mt-4'>
 <div className='col-span-2.5 img-hover-zoom--zoom-n-rotate px-6'>
 <img
 src={BrandName6}
@@ -450,6 +444,45 @@ alt='Brand logo'
 
 </div>
 </section>
+
+{/* ============================ */}
+{/* ----Footer --------------*/}
+{/* ============================ */}
+
+<section className='mt-28 bg-[#1d1d24] py-8'>
+ 
+    <div className='grid lg:grid-cols-12 md:grid-cols-12 sm:grid-cols-12 grid-cols-12 flex justify-center items-center'>
+
+<div className='lg:col-span-2 md:col-span-2 sm:col-span-12 col-span-12'>
+<img
+src={MainLogo}
+alt="main logo"
+/>
+</div>
+
+
+<div className='lg:col-span-8 md:col-span-8 sm:col-span-12 col-span-12'>
+<ul className='flex justify-center '>
+  <li className='px-2 group'> <FontAwesomeIcon icon={faFacebookF} className='text-[#9c9eab] social-media-brand group-hover:bg-[#e9162b]      hover:text-[#fff]'/>  </li>
+  <li className='px-2 group'> <FontAwesomeIcon icon={faLinkedinIn} className='text-[#9c9eab] social-media-brand group-hover:bg-[#e9162b]      hover:text-[#fff]' />  </li>
+  <li className='px-2 group'> <FontAwesomeIcon icon={faTwitter}  className='text-[#9c9eab] social-media-brand group-hover:bg-[#e9162b]      hover:text-[#fff]'/>  </li>
+  <li className='px-2 group'> <FontAwesomeIcon icon={faInstagram} className='text-[#9c9eab] social-media-brand group-hover:bg-[#e9162b]      hover:text-[#fff]' />  </li>
+</ul>
+</div>
+
+
+<div className='lg:col-span-2 md:col-span-2 sm:col-span-12 col-span-12'>
+<p className='text-[#9c9eab]'>Copyright © 2022 Rainbow-Themes. All Rights Reserve</p>
+</div>
+
+
+
+
+
+    </div>
+
+</section>
+
 
     </>
   )

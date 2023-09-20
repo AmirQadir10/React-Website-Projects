@@ -14,15 +14,17 @@ import Testinominal8 from '../assets/Images/testimonial-8.jpg'
 
 
 function CustomerTestinominal() {
-const [comment, setcomment] = useState("")
-const [title, settitle] = useState("")
 
-const [id, setid] = useState(0)
+const [comment, setcomment] = useState("Phenomenal Customer Service! I'm just starting out with the team helped me so much with integrating this into my website. Highly recommend.")
+const [title, settitle] = useState("Bashir")
 
-const onclickimagethumb = (num) => {
-setid(num)
 
-console.log(num)
+
+const onclickimagethumb = (id) => {
+  const element = document.getElementById(id);
+  if (element) {
+    element.style.display = 'block ';
+  }
 
 }
 
@@ -52,17 +54,26 @@ const changethetitle = (tit) =>{
     
     </div>
 
-    <ul className='col-span-12 flex justify-center '>
-<li className='px-2 relatve'> 
-<span className='rounded-lg bg-[#f9004d] absolute w-[10px] h-[10px] hidden  ' id="1"></span>
+</div>
 
-<img src={Testinominal1} alt="image of testinominal" onClick={() => {changethecomment("Phenomenal Customer Service! I'm just starting out with the team helped me so much with integrating this into my website. Highly recommend."); changethetitle("Bashir"); onclickimagethumb(1); }}   className='cursor-pointer'/> 
+
+
+<ul className='grid gap-1 lg:grid-cols-5 md:grid-cols-5 sm:grid-cols-5 grid-cols-5 flex justify-center items-center'>
+<li className='px-2 relatve '> 
+
+  <span className='rounded-lg bg-[#f9004d] absolute w-[10px] h-[10px] hidden'   id="1" ></span>
+
+
+
+<img src={Testinominal1} alt="image of testinominal" onClick={() => {changethecomment("Phenomenal Customer Service! I'm just starting out with the team helped me so much with integrating this into my website. Highly recommend."); changethetitle("Bashir"); onclickimagethumb(1); }}   className='cursor-pointer '/> 
 
 
  </li>
 
 <li className='px-2'>
-<img src={Testinominal2} alt="image of testinominal" onClick={() => {changethecomment("Exactly what I was looking for. Saved me a bit of time using this template to start my project.İt' s pretty good."); changethetitle("Robbin");}} className='cursor-pointer'/>
+<span className='rounded-lg bg-[#f9004d] absolute w-[10px] h-[10px] hidden'   id="2" ></span>
+
+<img src={Testinominal2} alt="image of testinominal" onClick={() => {changethecomment("Exactly what I was looking for. Saved me a bit of time using this template to start my project.İt' s pretty good."); changethetitle("Robbin"); onclickimagethumb(2 );}} className='cursor-pointer'/>
 </li>
 
 <li className='px-2'>
@@ -93,10 +104,9 @@ const changethetitle = (tit) =>{
 
     </ul>
 
+    </div>
 
 
-</div>
-</div>
     </section>
     </>
   )
